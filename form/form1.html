@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        form : 웹 서버에 정보를 제출하기 위한 양식 범위를 정리
+
+        속성
+        1) action : form 안에 정보들을 어디로 전송할 것인가에 대한 URL(절대경로, 상대경로)
+            action 을 쓰지 않았다면 현재 페이지 경로가 그대로 쓰임
+        2) method : 서버로 전송할 HTTP방식(get / post)
+           - get(기본) : 주소줄에 특정 값들이 따라다님
+                         https://naver.com?query=썬더드래곤&ie=utf8
+           - post : 전송된 값들이 감춰짐(로그인, 회원가입)
+        
+        폼 요소 
+        1) input 태그
+           (1) text : 한 줄 짜리 텍스트 임력용
+           (2) radio
+           (3) checkbox
+           (4) submit : 폼 서버로 전송
+           (5) reset
+           (6) button
+           (7) password
+
+        전역속성 : 모든 태그에 사용할 수 있는 속성
+        class, id, ma,e, dara-*
+        id : 현재 페이지에서 값은 중복 안됨
+     -->
+
+    <form action="" method="get">
+      <div>
+        <label for="">First name:</label>
+        <div>
+          <input type="text" name="first name" id="first name" />
+        </div>
+      </div>
+      <div>
+        <label for="">Last name:</label>
+      </div>
+      <div>
+        <input type="text" name="lastname" id="lastname" />
+      </div>
+      <div>
+        <input type="submit" value="전송" />
+      </div>
+    </form>
+
+    <!-- 
+        http://192.168.0.19:5500/form/form1.html?first+name=hong&lastname=gildong 
+                 action 주소 ? key=value & key=value
+                 key : input 요소의 name값
+                 value : 사요자 입력값
+        http://192.168.0.19:5500/form/form1.html?first+name=&lastname=gildong
+    -->
+  </body>
+</html>
